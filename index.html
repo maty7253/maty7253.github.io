@@ -9,19 +9,19 @@
   <!-- Google Fonts for better typography -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-t from-gray-900 via-indigo-800 to-purple-800 text-gray-100 font-poppins">
+<body class="bg-gray-900 text-gray-100 font-poppins">
 
   <!-- Header Section -->
-  <header class="py-12 bg-black/60">
+  <header class="py-16 bg-gray-800/80 shadow-md">
     <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-5xl font-extrabold text-white leading-tight">Welcome to My GitHub Pages</h1>
-      <p class="mt-4 text-xl text-gray-300">Here is the README file from my GitHub repository.</p>
+      <h1 class="text-5xl font-extrabold text-white leading-tight tracking-tight">Welcome to My GitHub Pages</h1>
+      <p class="mt-4 text-xl text-gray-300">Explore the README content from my GitHub repository</p>
     </div>
   </header>
 
   <!-- Main Content Section -->
-  <main class="max-w-6xl mx-auto p-8">
-    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
       <!-- The content from the README will be injected here -->
     </div>
   </main>
@@ -41,7 +41,12 @@
   </script>
 
   <style>
-    /* Custom code block styling */
+    /* General styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Code block styling */
     pre code {
       background-color: #2a2f40;
       color: #f8f8f2;
@@ -54,40 +59,46 @@
     code {
       background-color: #2a2f40;
       color: #f8f8f2;
-      padding: 0.2rem 0.4rem;
+      padding: 0.25rem 0.5rem;
       border-radius: 6px;
     }
 
     /* Link Styling */
     a {
-      color: #6ad3ff;
+      color: #7289da;
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #99d9ff;
+      color: #99aab5;
       text-decoration: underline;
     }
 
-    /* Header Customization */
+    /* Header customizations */
     h1 {
       font-size: 3.25rem;
-      font-weight: 900;
-      color: #e5e5e5;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      font-weight: 800;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    h2, h3 {
+      font-weight: 700;
+      color: #e0e0e0;
     }
 
     h2 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: #d3d3d3;
+      font-size: 2rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
     }
 
     h3 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: #d3d3d3;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     p {
@@ -96,41 +107,35 @@
       color: #d1d5db;
     }
 
-    /* List Styling */
-    ul, ol {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
     /* Blockquote Styling */
     blockquote {
       background-color: #2a2f40;
-      border-left: 5px solid #6ad3ff;
-      padding: 1.25rem;
+      border-left: 5px solid #7289da;
+      padding: 1rem;
       margin: 1.5rem 0;
       font-style: italic;
-      color: #d1d5db;
+      color: #b1b1b1;
+      border-radius: 10px;
     }
 
     /* Image Styling */
     img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 1rem;
     }
 
     /* Line breaks for better spacing */
     br {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
-    /* Card Effect with Shadow */
+    /* Card effect with shadow */
     .prose {
-      background-color: #1c1f29;
+      background-color: #1e2128;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       transition: box-shadow 0.3s ease;
     }
 
@@ -138,35 +143,27 @@
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
     }
 
-    /* Footer */
-    footer {
-      background-color: #181a20;
-      text-align: center;
-      padding: 2rem;
-      color: #ccc;
+    /* Hover effects */
+    .prose a {
+      color: #99aab5;
     }
 
-    footer a {
-      color: #6ad3ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+    .prose a:hover {
+      color: #7289da;
     }
 
     /* Responsive Layout */
     @media screen and (max-width: 768px) {
       h1 {
-        font-size: 2.75rem;
+        font-size: 2.5rem;
       }
 
       h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
   </style>
