@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub Pages with README</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for a clean typography feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-black text-gray-100 font-poppins">
 
   <!-- Header Section -->
-  <header class="bg-indigo-800 text-white py-6">
+  <header class="py-8 bg-gradient-to-r from-indigo-700 to-purple-700 shadow-lg">
     <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl font-extrabold">Welcome to My GitHub Pages</h1>
-      <p class="mt-2 text-lg">Here is the README file from my GitHub repository.</p>
+      <h1 class="text-5xl font-extrabold text-white leading-tight">Welcome to My GitHub Pages</h1>
+      <p class="mt-4 text-xl">Here is the README file from my GitHub repository.</p>
     </div>
   </header>
 
   <!-- Main Content Section -->
-  <main class="max-w-4xl mx-auto p-6">
-    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto">
+  <main class="max-w-5xl mx-auto p-8">
+    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl">
       <!-- The content from the README will be injected here -->
     </div>
   </main>
@@ -29,12 +30,9 @@
     fetch('https://raw.githubusercontent.com/maty7253/maty7253/maty/README.md')
       .then(response => response.text())
       .then(data => {
-        // Replace relative image paths with absolute URLs
         const updatedMarkdown = data.replace(/!\[(.*?)\]\(\.\/(.*?)\)/g, (match, altText, path) => {
           return `![${altText}](https://raw.githubusercontent.com/maty7253/maty7253/maty/${path})`;
         });
-
-        // Render the updated markdown using marked.js
         document.getElementById('readme-content').innerHTML = marked.parse(updatedMarkdown);
       })
       .catch(error => {
@@ -43,77 +41,109 @@
   </script>
 
   <style>
-    /* Ensure code blocks have a background color */
+    /* Custom code block styling */
     pre code {
-      background-color: #2d2d2d;
+      background-color: #2b2d31;
       color: #f8f8f2;
       padding: 1rem;
       border-radius: 8px;
       display: block;
+      overflow-x: auto;
     }
 
-    /* Ensure inline code has appropriate styling */
     code {
-      background-color: #333;
+      background-color: #2b2d31;
       color: #f8f8f2;
       padding: 0.2rem 0.4rem;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
-    /* Custom styling for headings */
-    h1 {
-      font-size: 2.5rem; /* Custom size for h1 */
-      font-weight: 800;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 2rem; /* Custom size for h2 */
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.75rem; /* Custom size for h3 */
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    h4, h5, h6 {
-      font-size: 1.25rem; /* Custom size for h4, h5, and h6 */
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-
-    /* Custom styling for links */
+    /* Custom link styling with hover effect */
     a {
-      color: #81a1c1;
+      color: #64b5f6;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
+      color: #90caf9;
       text-decoration: underline;
     }
 
-    /* Custom line height for paragraphs and readability */
-    p {
-      line-height: 1.8;
-      margin-bottom: 1rem; /* Ensure paragraphs have space between them */
+    /* Header Customization */
+    h1 {
+      font-size: 3rem; 
+      font-weight: 900;
+      line-height: 1.4;
+      color: #e0e0e0;
     }
 
-    /* Styling for unordered and ordered lists */
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #e0e0e0;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #e0e0e0;
+    }
+
+    /* Styling for paragraphs */
+    p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    /* List styling */
     ul, ol {
       margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      background-color: #2b2d31;
+      border-left: 5px solid #ff4081;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+
+    /* Ensure images fit the container */
+    img {
+      max-width: 100%;
+      border-radius: 8px;
       margin-bottom: 1rem;
     }
 
-    /* Ensuring proper spacing for line breaks */
+    /* Line break styling */
     br {
-      margin-bottom: 0.5rem; /* Space after each line break */
+      margin-bottom: 1rem;
+    }
+
+    /* Style the content card */
+    .prose {
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add responsiveness */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 
