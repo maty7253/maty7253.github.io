@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Pages with README</title>
+  <title>maty7253</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -17,8 +17,13 @@
     fetch('https://raw.githubusercontent.com/maty7253/maty7253/maty/README.md')
       .then(response => response.text())
       .then(data => {
-        // Use the updated API method to render the markdown
-        document.getElementById('readme-content').innerHTML = marked.parse(data);
+        // Replace relative image paths with absolute URLs
+        const updatedMarkdown = data.replace(/!\[(.*?)\]\(\.\/(.*?)\)/g, (match, altText, path) => {
+          return `![${altText}](https://raw.githubusercontent.com/maty7253/maty7253/maty/${path})`;
+        });
+
+        // Render the updated markdown using marked.js
+        document.getElementById('readme-content').innerHTML = marked.parse(updatedMarkdown);
       })
       .catch(error => {
         console.error('Error fetching the README:', error);
