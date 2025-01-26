@@ -8,19 +8,19 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-900 text-gray-100">
 
   <!-- Header Section -->
-  <header class="bg-indigo-600 text-white py-4">
+  <header class="bg-indigo-800 text-white py-6">
     <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-3xl font-semibold">Welcome to My GitHub Pages</h1>
+      <h1 class="text-4xl font-extrabold">Welcome to My GitHub Pages</h1>
       <p class="mt-2 text-lg">Here is the README file from my GitHub repository.</p>
     </div>
   </header>
 
   <!-- Main Content Section -->
-  <main class="max-w-4xl mx-auto p-4">
-    <div id="readme-content" class="prose lg:prose-xl mx-auto">
+  <main class="max-w-4xl mx-auto p-6">
+    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto">
       <!-- The content from the README will be injected here -->
     </div>
   </main>
@@ -41,6 +41,45 @@
         console.error('Error fetching the README:', error);
       });
   </script>
+
+  <style>
+    /* Ensure code blocks have a background color */
+    pre code {
+      background-color: #2d2d2d;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Ensure inline code has appropriate styling */
+    code {
+      background-color: #333;
+      color: #f8f8f2;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    /* Custom styling for headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    /* Custom styling for links */
+    a {
+      color: #81a1c1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom line height for paragraphs and readability */
+    p {
+      line-height: 1.8;
+    }
+  </style>
 
 </body>
 </html>
