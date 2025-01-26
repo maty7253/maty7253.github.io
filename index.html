@@ -6,22 +6,22 @@
   <title>GitHub Pages with README</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts for a clean typography feel -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-black text-gray-100 font-poppins">
+<body class="bg-gradient-to-t from-gray-900 via-indigo-800 to-purple-800 text-gray-100 font-poppins">
 
   <!-- Header Section -->
-  <header class="py-8 bg-gradient-to-r from-indigo-700 to-purple-700 shadow-lg">
-    <div class="max-w-5xl mx-auto text-center">
+  <header class="py-12 bg-black/60">
+    <div class="max-w-6xl mx-auto text-center">
       <h1 class="text-5xl font-extrabold text-white leading-tight">Welcome to My GitHub Pages</h1>
-      <p class="mt-4 text-xl">Here is the README file from my GitHub repository.</p>
+      <p class="mt-4 text-xl text-gray-300">Here is the README file from my GitHub repository.</p>
     </div>
   </header>
 
   <!-- Main Content Section -->
-  <main class="max-w-5xl mx-auto p-8">
-    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl">
+  <main class="max-w-6xl mx-auto p-8">
+    <div id="readme-content" class="prose prose-invert lg:prose-xl mx-auto bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
       <!-- The content from the README will be injected here -->
     </div>
   </main>
@@ -43,98 +43,122 @@
   <style>
     /* Custom code block styling */
     pre code {
-      background-color: #2b2d31;
+      background-color: #2a2f40;
       color: #f8f8f2;
-      padding: 1rem;
-      border-radius: 8px;
+      padding: 1.25rem;
+      border-radius: 10px;
       display: block;
       overflow-x: auto;
     }
 
     code {
-      background-color: #2b2d31;
+      background-color: #2a2f40;
       color: #f8f8f2;
       padding: 0.2rem 0.4rem;
       border-radius: 6px;
     }
 
-    /* Custom link styling with hover effect */
+    /* Link Styling */
     a {
-      color: #64b5f6;
+      color: #6ad3ff;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #90caf9;
+      color: #99d9ff;
       text-decoration: underline;
     }
 
     /* Header Customization */
     h1 {
-      font-size: 3rem; 
+      font-size: 3.25rem;
       font-weight: 900;
-      line-height: 1.4;
-      color: #e0e0e0;
+      color: #e5e5e5;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
 
     h2 {
       font-size: 2.25rem;
       font-weight: 700;
-      color: #e0e0e0;
+      color: #d3d3d3;
     }
 
     h3 {
       font-size: 1.75rem;
       font-weight: 600;
-      color: #e0e0e0;
+      color: #d3d3d3;
     }
 
-    /* Styling for paragraphs */
     p {
-      line-height: 1.7;
+      line-height: 1.75;
       margin-bottom: 1.5rem;
+      color: #d1d5db;
     }
 
-    /* List styling */
+    /* List Styling */
     ul, ol {
-      margin-left: 2rem;
+      margin-left: 1.5rem;
       margin-bottom: 1.5rem;
       padding-left: 1.5rem;
     }
 
-    /* Blockquote styling */
+    /* Blockquote Styling */
     blockquote {
-      background-color: #2b2d31;
-      border-left: 5px solid #ff4081;
-      padding: 1rem;
-      margin: 1rem 0;
+      background-color: #2a2f40;
+      border-left: 5px solid #6ad3ff;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
       font-style: italic;
+      color: #d1d5db;
     }
 
-    /* Ensure images fit the container */
+    /* Image Styling */
     img {
       max-width: 100%;
       border-radius: 8px;
       margin-bottom: 1rem;
     }
 
-    /* Line break styling */
+    /* Line breaks for better spacing */
     br {
       margin-bottom: 1rem;
     }
 
-    /* Style the content card */
+    /* Card Effect with Shadow */
     .prose {
-      background-color: #1f1f1f;
+      background-color: #1c1f29;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: box-shadow 0.3s ease;
     }
 
-    /* Add responsiveness */
+    .prose:hover {
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #181a20;
+      text-align: center;
+      padding: 2rem;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #6ad3ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Layout */
     @media screen and (max-width: 768px) {
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
       }
 
       h2 {
